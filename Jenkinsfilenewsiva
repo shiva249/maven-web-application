@@ -1,1 +1,35 @@
 
+node
+{
+ def mavenHome = tool name:	"maven"
+ stage ('checkout')
+ {
+ git branch: 'development', url: 'https://github.com/shiva249/maven-web-application.git'
+ }
+ stage ('Build')
+ {
+ sh "${mavenHome}/bin/mvn clean package"
+ }
+ stage ('execute sonarqube project')
+ {
+ sh "${mavenHome}/bin/mvn sonar:sonar"
+ }
+ stage ('upload artifact into nexus')
+ {
+ sh "${mavenHome}/bin/mvn deploy"
+ }
+ stage ('deploy application into tomcat server')
+ {
+ sshagent(['b721afc3-1450-4176-b13b-9a3437f3b85d']) {
+    sh "scp -o StrictHostKeyChecking=no target/maven-web-application.war ec2-user@18.144.29.97:/opt/apache-tomcat-10.0.10/webapps/"
+}
+ }
+stage ('send email notification')
+ {
+ emailext body: '''Build-Over
+
+Thanks and Regards,
+Siva Prasad. J''', subject: 'Build-Over', to: 'j.siva13@gmail.com'
+}
+}
+ 
