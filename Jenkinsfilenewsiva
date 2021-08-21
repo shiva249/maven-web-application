@@ -1,5 +1,6 @@
 node
 {
+ properties([pipelineTriggers([pollSCM('* * * * *')])])
  def mavenHome = tool name:	"maven"
  stage ('checkout')
  {
