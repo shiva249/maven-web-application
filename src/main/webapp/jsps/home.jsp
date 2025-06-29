@@ -10,10 +10,10 @@
 </head>
 <body>
 <h1 align="center">Welcome to Ifocus Technologies</h1>
-<h1 align="center">Phone Number: +91 9980923216</h1>
+<h1 align="center">Phone Number: +91 ********</h1>
 <h1 align="center">Ifocus Technologies is a Very Good Training Center for DevOps, Cloud, Kubernetes and Terraform</h1>
 
-<h1 align="center">Trainer Name: Bhaskar Reddy Lacchannagari</h1>
+<h1 align="center">Trainer Name: Siva Prasad </h1>
 
 <hr>
 <br>
