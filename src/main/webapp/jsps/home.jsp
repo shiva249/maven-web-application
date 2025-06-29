@@ -41,10 +41,8 @@ out.println("Server Host Name :: "+inetAddress.getHostName());
 		Ifocus Technologies, 
 		Marathahalli,
 		Bengaluru,
-		+91 9980923216 and 
-		Devopstrainingblr@Gmail.com
 		<br>
-		<a href="mailto:Devopstrainingblr@Gmail.com">Mail to Ifocus Technologies</a>
+		<a href="mailto:ifocus@Gmail.com">Mail to Ifocus Technologies</a>
 	</span>
 </div>
 <hr>
